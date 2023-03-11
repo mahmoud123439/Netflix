@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:ital,wght@0,300;0,600;0,700;1,700&display=swap');
+
+
+.view-loading{
+    background-color: #111;
+    height: 100vh;
+    width: 100vw;
+}
+.loading {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 150px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  letter-spacing: 4.4px;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+
+.loading::before {
+  color: rgb(255, 255, 255);
+  content: attr(data-loading-text);
+}
+
+.loading::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  opacity: 1;
+  color:#e50914;
+  overflow: hidden;
+  content: attr(data-loading-text);
+  -webkit-animation: loading 5s infinite;
+  animation: loading 5s infinite;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
